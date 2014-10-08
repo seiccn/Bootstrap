@@ -1,0 +1,116 @@
+/* Custom styling for the Bootstrap website. 
+These styles do not ship with Bootstrap. 
+*/
+footer {
+	text-align: center;
+	color: #999;
+	border-top: 1px solid #ccc;
+	padding: 2em 0em;
+	margin: 3em 0;
+}
+
+/* Styling of Jumbotron*/
+
+  @media screen and (min-width: @screen-sm-min) {
+    padding-top:    (@jumbotron-padding * 1.3);
+    padding-bottom: (@jumbotron-padding * 1.3);
+
+    .container & {
+      padding-left:  (@jumbotron-padding * 1.8);
+      padding-right: (@jumbotron-padding * 1.8);
+    }
+
+    .jumbotron h1,
+    .jumbotron .h1 {
+      font-size: (@font-size-base * 3);
+    }
+  }
+.jumbotron {
+border: 1px solid @brand-secondary;
+}
+
+/* Custom text shadow styles (1) */
+.textShadowBlack(@shadow: 0 1px 0px rgba(0,0,0,1)) {
+text-shadow: @shadow;
+}
+
+.textShadowWhite(@shadow: 0 1px 0px rgba(255,255,255,1)) {
+text-shadow: @shadow;
+}
+
+.textShadowPink(@shadow: 0 1px 0px rgba(242,70,138,1)) {
+text-shadow: @shadow;
+}
+
+// Left/right controls for nav
+// ---------------------------
+
+.carousel-control {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: @carousel-control-width;
+  .opacity(@carousel-control-opacity);
+  font-size: @carousel-control-font-size;
+  color: @carousel-control-color;
+  text-align: center;
+  text-shadow: @carousel-text-shadow;
+  // We can't have this transition here because WebKit cancels the carousel
+  // animation if you trip this while in the middle of another animation.
+
+  // Set gradients for backgrounds
+  &.left {
+    #gradient > .horizontal(@start-color: rgba(0,0,0,.5); @end-color: rgba(0,0,0,.0001));
+  }
+  &.right {
+    left: auto;
+    right: 0;
+    #gradient > .horizontal(@start-color: rgba(0,0,0,.0001); @end-color: rgba(0,0,0,.5));
+  }
+
+  // Hover/focus state
+  &:hover,
+  &:focus {
+    outline: none;
+    color: @carousel-control-color;
+    text-decoration: none;
+    .opacity(.9);
+  }
+
+  // Toggles
+  .icon-prev,
+  .icon-next,
+  .glyphicon-chevron-left,
+  .glyphicon-chevron-right {
+    position: absolute;
+    top: 50%;
+    z-index: 5;
+    display: inline-block;
+  }
+  .icon-prev,
+  .glyphicon-chevron-left {
+    left: 50%;
+    color: #ff1d8e;
+  }
+  .icon-next,
+  .glyphicon-chevron-right {
+    right: 50%;
+  }
+  .icon-prev,
+  .icon-next {
+    width:  20px;
+    height: 20px;
+    margin-top: -10px;
+    margin-left: -10px;
+    font-family: serif;
+  }
+
+}
+
+
+.btn-default-round {
+   -webkit-border-radius: 20px;
+   -moz-border-radius: 20px;
+   border-radius: 20px;
+}
