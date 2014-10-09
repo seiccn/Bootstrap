@@ -1,0 +1,112 @@
+/* Some selected styles of the less file to show less customizations with the Prepros program
+*/
+
+/* 1. Customization of existing styles- You can see the pink line */
+footer {
+	text-align: center;
+	color: #999;
+	border-top: 3px solid #ccc;
+	border-color: #7B1840;
+	padding: 2em 0em;
+	margin: 3em 0;
+}
+
+/* Index.html: BTN Changes of the btn: 2. Please check variables.less and look for btn-primary where the brand-primary background-color is set to goldbrown 6c4a1a; 3. Later in variables.less I set the btn-primary border-color 15% darker  */
+
+/* 4. Styling of Jumbotron: Pink Border */
+
+.jumbotron {
+border: 1px solid @brand-secondary;
+}
+
+/* 5. Styling of the Glyphicons and the Carousel One purple and one pink */
+
+// Left/right controls for nav
+// ---------------------------
+
+.carousel-control {
+
+
+  // Toggles
+  .icon-prev,
+  .icon-next,
+  .glyphicon-chevron-left,
+  .glyphicon-chevron-right {
+    position: absolute;
+    top: 50%;
+    z-index: 5;
+    display: inline-block;
+  }
+  .icon-prev,
+  .glyphicon-chevron-left {
+    left: 50%;
+    color: #8c0d88;
+  }
+  .icon-next,
+  .glyphicon-chevron-right {
+    right: 50%;
+	color: #ff1d8e;
+  }
+  .icon-prev,
+  .icon-next {
+    width:  20px;
+    height: 20px;
+    margin-top: -10px;
+    margin-left: -10px;
+    font-family: serif;
+  }
+
+}
+
+/* 6. Styling of the accordeon panel- underlined headings in a lighter color as the brand primary color- "golden" */
+
+.panel {
+  margin-top: 69px;
+
+.panel-body {
+  padding: @panel-body-padding;
+  &:extend(.clearfix all);
+  color: #fff;
+  }
+
+  a {
+  	color: lighten(@brand-primary, 25%);
+  	text-decoration: underline;
+  }
+  a:hover {
+  	text-decoration: none;
+  }
+}
+
+/* 7. Styling of the btn-default button- see color changes */
+
+/* 1. Custom style- round button */
+
+.btn-round {
+   -webkit-border-radius: 20px;
+   -moz-border-radius: 20px;
+   border-radius: 20px;
+} 
+
+/* 2. Beautiful border radius using mixins, used on pictures */
+
+.shadows {
+    .border-radius(30px);
+} 
+
+/* 3. Beautiful blurring around images using mixins */
+.blurred {
+    .box-shadow(5px, 5px, 6px, 0.3);
+} 
+
+/* 4. Gradient color div using mixins */
+.beaugrad {
+    .gradient(left, #e8b066, #f5e5d0);
+} 
+
+/* 5. Reflections */
+
+/* Implementation */
+.reflectit {
+    .reflect(20%, 0.2);
+}
