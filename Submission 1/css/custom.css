@@ -63,7 +63,7 @@ a:focus {
 /*Navigation */  
 
 .company { 
-	no-repeat scroll 0px 0px transparent;
+	background: no-repeat scroll 0px 0px transparent;
 }
 
 .navbar-custom {
